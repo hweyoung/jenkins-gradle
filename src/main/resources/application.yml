@@ -1,0 +1,19 @@
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://code.ctzj3wo1j5ri.ap-northeast-2.rds.amazonaws.com:3306/instagram
+#    username: master
+#    password: timeset12
+#  cloud:
+#    gcp:
+#      storage:
+#        credentials:
+#          location: classpath:civil-treat-360317-cea5f2d8ef7c.json
+
+
+server:
+  ssl:
+    key-store : /etc/letsencrypt/live/clone-instagram.shop/keystore.p12
+    key-store-type : PKCS12
+    key-store-password : 1234
+  port: 3000
