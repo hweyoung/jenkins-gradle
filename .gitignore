@@ -5,9 +5,5 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-src/main/java/com/clone/instagram/service/ImageService.java
-src/main/java/com/clone/instagram/config/secret/**
-src/main/resources/civil-treat-360317-cea5f2d8ef7c.json
-src/main/java/com/clone/instagram/Utils/FileUtils.java
 build/**
-
+src/main/resources/application.yml
