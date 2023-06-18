@@ -1,0 +1,42 @@
+{{>layouts/header}}
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- jumbotron -->
+<div class="jumbotron">
+    <h1>Post List</h1>
+    <hr>
+    <p>post/index.mustache</p>
+    <a href="/post/new" class="btn btn-primary">write</a>
+</div>
+Post Table
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>title</th>
+        <th>content</th>
+        <th>writer</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#postList}}
+        <tr style="table-layout:fixed" >
+            <td>{{postIdx}}</td>
+            <td style="text-align:left;" v-if="result.message.length < 30">
+                <a href="/post/{{postIdx}}">{{title}}</a> <!-- 링크 추가 -->
+            </td>
+            <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{content}}</td>
+            <td>{{user.id}}</td>
+        </tr>
+    {{/postList}}
+    </tbody>
+</table>
+
+{{>layouts/footer}}

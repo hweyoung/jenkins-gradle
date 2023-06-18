@@ -1,0 +1,46 @@
+{{>layouts/header}}
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">logout</a>
+        </li>
+    </ul>
+</div>
+</nav>
+<!-- jumbotron -->
+<div class="jumbotron">
+    <h1>View Details</h1>
+    <hr>
+    <p>post/show.mustache</p>
+</div>
+<!-- table -->
+<table class="table table-hover">
+    <tbody>
+    {{#post}}
+        <tr>
+            <th>index</th>
+            <td>{{postIdx}}</td>
+        </tr>
+        <tr>
+            <th>title</th>
+            <td>{{title}}</td>
+        </tr>
+        <tr>
+            <th>content</th>
+            <td>{{content}}</td>
+        </tr>
+        </tbody>
+
+            <tfoot>
+            <tr>
+                <th></th>
+                <td>
+                    <button class="btn btn-danger" id="post-delete-btn">delete</button> <!-- 삭제 버튼 추가 -->
+                    <button class="btn btn-primary" id="page-back-btn" onclick="location.href ='/page';">back</button>
+                </td>
+            </tr>
+            </tfoot>
+    {{/post}}
+</table>
+<Script src="/js/post.js"></script>
+{{>layouts/footer}}

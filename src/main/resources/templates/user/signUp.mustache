@@ -1,0 +1,26 @@
+{{>layouts/header}}
+</nav>
+<div class="jumbotron">
+    <h1>Sign up!</h1>
+    <h2>This Project is kubernetes with cloud</h2>
+</div>
+
+<form class="container">
+    <div class="form-group">
+        <label for="title">id</label>
+        <!-- name="title" 추가, DTO의 필드명과 일치해야 함! -->
+        <input name="id" type="text" class="form-control" id="user-id" placeholder="id">
+    </div>
+    <div class="form-group">
+        <label for="title">password</label>
+        <!-- name="title" 추가, DTO의 필드명과 일치해야 함! -->
+        <input name="pwd" type="text" class="form-control" id="user-pwd" placeholder="password">
+    </div>
+    <!-- type="button"으로 변경, id값 추가 -->
+    <button type="button" class="btn btn-primary" id="user-join-btn" >submit</button>
+    <button type="button" class="btn btn-primary" id="redirect-login" onclick="location.href ='/';">back</button>
+
+</form>
+<Script src="/js/user.js"></script>
+
+{{>layouts/footer}}

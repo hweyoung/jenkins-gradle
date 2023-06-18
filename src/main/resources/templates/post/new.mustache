@@ -1,0 +1,32 @@
+{{>layouts/header}}
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">logout</a>
+        </li>
+    </ul>
+</div>
+</nav>
+<div class="jumbotron">
+    <h1>new Post</h1>
+    <hr>
+    <p>post/new.mustache</p>
+</div>
+<form class="container">
+    <div class="form-group">
+        <label for="title">title</label>
+        <!-- name="title" 추가, DTO의 필드명과 일치해야 함! -->
+        <input name="title" type="text" class="form-control" id="post-title" placeholder="enter your title">
+    </div>
+    <div class="form-group">
+        <label for="content">content</label>
+        <!-- name="content" 추가, DTO의 필드명과 일치해야 함! -->
+        <textarea name="content" class="form-control" id="post-content" placeholder="enter your content" rows="3"></textarea>
+    </div>
+    <!-- type="button"으로 변경, id값 추가 -->
+    <button type="button" class="btn btn-primary" id="post-create-btn">submit</button>
+    <button type="button" class="btn btn-primary" id="redirect-login" onclick="location.href ='/page';">back</button>
+
+</form>
+<Script src="/js/post.js"></script>
+{{>layouts/footer}}
