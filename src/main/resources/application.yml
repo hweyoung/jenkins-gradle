@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.201.96.219:3306/4cloud?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: master
+    password: 4Zmffkdnem!
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
+    generate-ddl: true
+  mustache:
+    servlet:
+      expose-session-attributes: true
