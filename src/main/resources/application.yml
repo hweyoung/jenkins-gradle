@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://43.201.96.219:3306/4cloud?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://13.125.150.83:3306/4cloud?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
     username: master
     password: 4Zmffkdnem!
 
